@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Agentic Platform</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- Load runtime config from Secret Manager (only exists on Cloud Run) -->
+    <!-- Locally, config.js won't exist and that's ok—we fall back to .env vars -->
+    <script src="/config.js" onerror="console.log('Local development mode: using .env variables')"></script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

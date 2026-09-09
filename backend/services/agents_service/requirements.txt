@@ -1,0 +1,7 @@
+functions-framework==3.8.3
+fastapi==0.141.1
+google-genai==2.20.0
+google-adk==2.8.0
+google-cloud-aiplatform==2.0.1
+google-cloud-tasks==2.19.3
+cloudpickle==3.1.1
