@@ -4,7 +4,8 @@ Stateless Python microservices for Google Cloud Functions (Gen2), split by domai
 
 ## TODOS
 
-- Create MCP server for the tooling and agent runtime to use (instead of local ADK)
+- Create a MD format to HTML converter for the agent's final responses.
+- Create MCP server for the tooling and agent runtime to use (instead of local ADK).
 
 ## Current Structure
 

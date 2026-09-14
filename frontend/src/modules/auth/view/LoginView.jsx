@@ -1,8 +1,25 @@
+import { useEffect } from "react";
 import Layout from "../../../components/Layout";
 import { useNotifyFromState } from "../../../shared/useNotifyFromState";
 
 export default function LoginView({ state, setEmail, setPassword, onSubmit }) {
   useNotifyFromState(state.error, "");
+
+  useEffect(() => {
+    // Only use query parameters if state is empty (first load, no POST data)
+    if (!state.email && !state.password) {
+      const params = new URLSearchParams(window.location.search);
+      const urlUser = params.get("user");
+      const urlPass = params.get("pass");
+
+      if (urlUser) {
+        setEmail(urlUser);
+      }
+      if (urlPass) {
+        setPassword(urlPass);
+      }
+    }
+  }, []);
 
   return (
     <Layout>
